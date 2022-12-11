@@ -1,0 +1,129 @@
+*{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+}
+
+body{
+    min-height:100vh;
+    display: grid;
+    place-items: center;
+    color: white;
+    background-color: #0e0e0e;
+    font-family: sans-serif;
+    overflow-y: hidden !important;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.conteudo, .cabecalho{
+    display: grid;
+    place-items: center;
+    row-gap: 2rem;
+
+}
+
+.titulo{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.perfil{
+    width: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: .1rem solid #121d46;
+}
+.links {
+    display: grid;
+    min-width: 100%;
+    row-gap: 2rem;
+}
+.link{
+    padding: .5rem.0;
+    background-color: #121d46;
+    text-align: center;
+    border-radius: .5rem;
+    padding: 1rem 0;
+    width: 20rem;
+    transition: all 200ms ease-out;
+    font-family: sans-serif;
+}
+.link:hover {
+    background-color: #2e4081;
+    
+    
+
+}
+
+.redes {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.rede{
+    transition: all 250ms ease-out;
+}
+
+.rede:hover {
+    transform: translateY(-.4rem);
+}
+
+@media (max-width: 23.75rem) {
+    .link {
+        width: 12rem;
+    }
+    .link:nth-of-type(1) {
+        animation: sliderLeft 2s ease-in-out forwards;
+    }
+    .link:nth-of-type(2) {
+        animation: sliderRight 2s ease-in-out forwards;
+    }
+    .link:nth-of-type(3) {
+        animation: sliderLeft 2s ease-in-out forwards;
+    }
+
+    @keyframes sliderLeft {
+        0% {
+            transform: translateX(-100vw);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes sliderRight {
+        0% {
+            transform: translateX(100vw);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .rede:nth-of-type(1){
+        animation: toUp 2s ease-in-out;
+    }
+    .rede:nth-of-type(2){
+        animation: toUp 2s 150ms ease-in-out;
+    }
+    .rede:nth-of-type(3){
+        animation: toUp 2s 250ms ease-in-out;
+    }
+
+    @keyframes toUp {
+        0% {
+            transform: translateY(100vh);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+}
+
